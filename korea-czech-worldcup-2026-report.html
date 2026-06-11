@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대한민국 vs 체코 — 2026 월드컵 스코어 확률 분석 보고서</title>
+<style>
+  :root{
+    --navy:#0f2350; --red:#c8102e; --blue:#11457e; --gold:#d4a017;
+    --bg:#f6f7fb; --card:#ffffff; --ink:#1c2333; --muted:#5b6478;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+  .wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+  header{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 60%,var(--red) 100%);color:#fff;border-radius:16px;padding:36px 32px;margin-bottom:28px}
+  header h1{font-size:1.7rem;margin-bottom:8px}
+  header .sub{opacity:.92;font-size:.98rem}
+  header .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 14px;font-size:.85rem}
+  .card{background:var(--card);border-radius:14px;padding:26px 28px;margin-bottom:22px;box-shadow:0 2px 10px rgba(15,35,80,.07)}
+  h2{font-size:1.25rem;color:var(--navy);margin-bottom:14px;border-left:5px solid var(--red);padding-left:12px}
+  h3{font-size:1.02rem;color:var(--blue);margin:18px 0 8px}
+  p{margin-bottom:10px}
+  .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+  .stat{background:#f2f5fb;border-radius:12px;padding:16px;text-align:center}
+  .stat .num{font-size:1.7rem;font-weight:800;color:var(--navy)}
+  .stat .lbl{font-size:.85rem;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:.92rem;margin:12px 0}
+  th,td{border:1px solid #dde3ef;padding:8px 6px;text-align:center}
+  thead th{background:var(--navy);color:#fff}
+  tbody th{background:#eef2fa;color:var(--navy)}
+  .hot{background:#ffd9a0;font-weight:800}
+  .warm{background:#ffeccc;font-weight:700}
+  .mild{background:#fff7e8}
+  ul,ol{margin:6px 0 12px 22px}
+  li{margin-bottom:6px}
+  .note{background:#fdf3e3;border-left:4px solid var(--gold);border-radius:8px;padding:12px 16px;font-size:.92rem;margin:14px 0}
+  .verify{background:#eaf6ee;border-left:4px solid #2e8b57;border-radius:8px;padding:12px 16px;font-size:.92rem;margin:14px 0}
+  .fix{background:#fdeaea;border-left:4px solid var(--red);border-radius:8px;padding:12px 16px;font-size:.92rem;margin:14px 0}
+  a{color:var(--blue)}
+  footer{font-size:.8rem;color:var(--muted);text-align:center;margin-top:30px}
+  .src li{font-size:.88rem}
+  .badge{display:inline-block;font-size:.72rem;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+  .b-ok{background:#d9efe1;color:#1c6b3c}.b-fix{background:#f9dada;color:#9c1c1c}
+  @media(max-width:640px){.summary{grid-template-columns:1fr}header h1{font-size:1.3rem}td,th{padding:5px 3px;font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>🇰🇷 대한민국 vs 체코 🇨🇿<br>2026 북중미 월드컵 A조 1차전 — 스코어 확률 분석 보고서 (검증판)</h1>
+  <div class="sub">0:0 ~ 5:5 전체 36개 스코어의 발생 확률 · Dixon-Coles 보정 포아송 모델 · 2차 교차검증 완료</div>
+  <div class="meta">
+    <span class="chip">📅 2026.6.11 20:00 (현지) / 6.12 11:00 (KST)</span>
+    <span class="chip">🏟️ 에스타디오 아크론, 과달라하라 (해발 약 1,566~1,571m)</span>
+    <span class="chip">⚽ 양 팀 월드컵 본선 첫 맞대결</span>
+    <span class="chip">🌡️ 낮 최고 29°C · 우기 소나기 가능</span>
+  </div>
+</header>
+
+<div class="card">
+  <h2>1. 핵심 요약</h2>
+  <div class="summary">
+    <div class="stat"><div class="num">36.9%</div><div class="lbl">🇰🇷 대한민국 승</div></div>
+    <div class="stat"><div class="num">31.0%</div><div class="lbl">🤝 무승부</div></div>
+    <div class="stat"><div class="num">32.1%</div><div class="lbl">🇨🇿 체코 승</div></div>
+  </div>
+  <p><strong>최다 확률 스코어는 1-1 (14.7%)</strong>이며, 0-0 (10.8%) · 한국 1-0 승 (9.6%) · 체코 0-1 승 (8.7%) · 한국 2-1 승 (8.2%)이 뒤를 잇습니다.
+  2.5골 미만(언더) 확률은 <strong>57.0%</strong>로, 한 골 차 이내의 팽팽한 저득점 경기가 가장 유력합니다.</p>
+  <p>본 모델의 승/무/패 확률은 베팅 시장 컨센서스(Kalshi: 한국 37% / 무 32% / 체코 33%)와 ±1%p 이내로 일치하도록 검증되었습니다.</p>
+</div>
+
+<div class="card">
+  <h2>2. 스코어 확률표 (0:0 ~ 5:5, 단위: %)</h2>
+  <p>행(세로) = 대한민국 득점, 열(가로) = 체코 득점. 색이 진할수록 확률이 높습니다.</p>
+  <table>
+    <thead>
+      <tr><th>KOR \ CZE</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>0</th><td class="warm">10.77</td><td class="warm">8.74</td><td class="mild">6.00</td><td>2.30</td><td>0.66</td><td>0.15</td></tr>
+      <tr><th>1</th><td class="warm">9.64</td><td class="hot">14.74</td><td class="warm">7.50</td><td>2.87</td><td>0.83</td><td>0.19</td></tr>
+      <tr><th>2</th><td class="warm">7.09</td><td class="warm">8.15</td><td class="mild">4.69</td><td>1.80</td><td>0.52</td><td>0.12</td></tr>
+      <tr><th>3</th><td>2.95</td><td class="mild">3.40</td><td>1.95</td><td>0.75</td><td>0.22</td><td>0.05</td></tr>
+      <tr><th>4</th><td>0.92</td><td>1.06</td><td>0.61</td><td>0.23</td><td>0.07</td><td>0.02</td></tr>
+      <tr><th>5</th><td>0.23</td><td>0.27</td><td>0.15</td><td>0.06</td><td>0.02</td><td>0.004</td></tr>
+    </tbody>
+  </table>
+  <div class="note">표의 0~5골 범위가 전체 확률 분포의 <strong>99.70%</strong>를 커버합니다. (6골 이상 조합 합계 ≈ 0.3%)</div>
+
+  <h3>확률 상위 5개 스코어</h3>
+  <table>
+    <thead><tr><th>순위</th><th>스코어 (KOR : CZE)</th><th>확률</th><th>결과</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>1 : 1</strong></td><td class="hot">14.7%</td><td>무승부</td></tr>
+      <tr><td>2</td><td><strong>0 : 0</strong></td><td class="warm">10.8%</td><td>무승부</td></tr>
+      <tr><td>3</td><td><strong>1 : 0</strong></td><td class="warm">9.6%</td><td>🇰🇷 승</td></tr>
+      <tr><td>4</td><td><strong>0 : 1</strong></td><td class="warm">8.7%</td><td>🇨🇿 승</td></tr>
+      <tr><td>5</td><td><strong>2 : 1</strong></td><td class="warm">8.2%</td><td>🇰🇷 승</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>3. 계산 방법론</h2>
+  <ol>
+    <li><strong>기대득점(λ) 설정:</strong> 대한민국 λ = 1.25골, 체코 λ = 1.15골 (합계 2.40골). 베팅 시장의 승/무/패 배당(Bet365: 한국 +162, 체코 +175, 무 +210)과 총득점 기준선 2.5골의 '언더 우세' 평가를 역산해 도출.</li>
+    <li><strong>독립 포아송 분포:</strong> 각 스코어 (i, j)의 기본 확률 = P(한국 i골) × P(체코 j골).</li>
+    <li><strong>Dixon-Coles 저득점 보정 (ρ = −0.13):</strong> 순수 포아송 모델이 0-0, 1-1 확률을 과소평가하는 알려진 편향을 보정. 보정 후 무승부 확률이 27.6% → 31.0%로 상승하며 시장 컨센서스(32%)에 수렴.</li>
+    <li><strong>시장 정합성 검증:</strong> 모델 산출 36.9 / 31.0 / 32.1% ↔ Kalshi 시장 37 / 32 / 33% — 오차 ±1%p 이내.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h2>4. 확률 산정 근거 (리서치 결과)</h2>
+
+  <h3>① 역대 상대전적 — 완전한 백중세 (1승 1무 1패)</h3>
+  <table>
+    <thead><tr><th>일자</th><th>경기</th><th>결과</th><th>대회</th></tr></thead>
+    <tbody>
+      <tr><td>1998.5.27</td><td>대한민국 vs 체코</td><td>2-2 무</td><td>친선경기</td></tr>
+      <tr><td>2001.8.15</td><td>체코 vs 대한민국</td><td>5-0 체코 승</td><td>친선경기</td></tr>
+      <tr><td>2016.6.5</td><td>체코 vs 대한민국</td><td>1-2 한국 승</td><td>친선경기</td></tr>
+    </tbody>
+  </table>
+  <p>3경기 모두 친선전으로 표본이 작고 가장 최근 경기도 10년 전이라 가중치는 낮게 두었으나, 우열을 가리기 어려운 전적은 무승부·한 골 차 스코어에 높은 확률을 부여하는 근거가 됩니다. 월드컵 본선 맞대결은 이번이 처음입니다.</p>
+
+  <h3>② 고지대 변수 — 대한민국이 준비에서 앞섬 ⛰️</h3>
+  <ul>
+    <li>경기장인 과달라하라 에스타디오 아크론은 <strong>해발 약 1,566~1,571m</strong>의 고지대로, 적응되지 않은 팀은 후반 체력 저하를 겪을 수 있음.</li>
+    <li>대한민국은 <strong>미국 유타주 솔트레이크시티(해발 약 1,410m)</strong>에 사전 캠프를 차리고 2주가량 고지대 적응 훈련을 진행 — 트리니다드토바고에 <strong>5-0 대승</strong>, 엘살바도르에 <strong>1-0 승</strong>.</li>
+    <li>반면 체코는 <strong>저지대 캠프만 운영</strong>해 고지대 적응에서 뒤처졌다는 평가(국내 복수 매체). 이 우위를 한국 λ에 약 +0.05~0.1 반영.</li>
+    <li>단, 더위(낮 최고 29°C)와 6월 우기 소나기 가능성은 양 팀 공통 변수.</li>
+  </ul>
+
+  <h3>③ 양 팀 전력·폼 비교</h3>
+  <table>
+    <thead><tr><th></th><th>🇰🇷 대한민국</th><th>🇨🇿 체코</th></tr></thead>
+    <tbody>
+      <tr><th>FIFA 랭킹</th><td>25위</td><td>40위권 (유럽 PO 통과팀)</td></tr>
+      <tr><th>본선 진출</th><td>11회 연속</td><td>2006년 이후 20년 만</td></tr>
+      <tr><th>예선 성적</th><td>무패 통과, 조 최다 득점</td><td>PO에서 아일랜드·덴마크에 연속 승부차기 승 (각 2-2)</td></tr>
+      <tr><th>최근 폼</th><td>평가전 2연승 (5-0, 1-0), 최근 15경기 중 14경기 'BTTS No'</td><td>최근 5경기 3승, 15득점 6실점 (과테말라전 3-1 승 포함)</td></tr>
+      <tr><th>핵심 공격수</th><td>손흥민 (PK·FK·역습 마무리 모두 담당), 이강인, 황희찬</td><td>파트리크 시크 (A매치 53경기 26골, 분데스리가 16골, 유로2020 공동 득점왕)</td></tr>
+      <tr><th>수비 핵심/부상</th><td>김민재 보유 / <strong>조유민 부상 아웃</strong> → 조위제 대체 발탁</td><td>특이 결장자 보고 없음</td></tr>
+    </tbody>
+  </table>
+  <p>한국은 개인 기량(손흥민·김민재)에서, 체코는 승부 근성과 시크의 한 방에서 강점. 특히 한국 경기의 <strong>'한 팀 무득점(BTTS No)' 경향(최근 15경기 중 14회)</strong>은 0-0 / 1-0 / 0-1 / 2-0 류의 저득점 스코어 확률을 높이는 핵심 통계입니다.</p>
+
+  <h3>④ 베팅 시장 데이터</h3>
+  <ul>
+    <li>Bet365: 한국 승 +162 · 체코 승 +175 · 무승부 +210</li>
+    <li>Kalshi 시장 컨센서스: 한국 37% · 무 32% · 체코 33%</li>
+    <li>총득점 기준선 2.5골 — 언더 우세 평가 (모델 산출 언더 확률 57.0%)</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>5. 2차 검증 결과 (교차 확인 내역)</h2>
+  <div class="verify"><strong>✅ 검증 통과 항목</strong>
+    <ul>
+      <li>경기 일시·장소: 6/11 현지 저녁, 과달라하라 에스타디오 아크론 — ESPN·FIFA·Goal·Al Jazeera 등 다수 소스 일치</li>
+      <li>역대 전적 1승 1무 1패 (98년 2-2, 01년 0-5, 16년 2-1) — Sports Mole·Khel Now 일치</li>
+      <li>배당률/시장 확률 (Bet365 +162/+175/+210, Kalshi 37/32/33) — SportsLine·CBS·FanDuel 일치</li>
+      <li>체코 본선 진출 경로 (아일랜드·덴마크 상대 연속 승부차기) — ESPN·UEFA 소스 일치</li>
+      <li>BTTS No 14/15 통계, 한국 무패 예선 통과 — 복수 소스 일치</li>
+    </ul>
+  </div>
+  <div class="fix"><strong>🔄 검증 과정에서 수정·보강된 항목</strong>
+    <ul>
+      <li><span class="badge b-fix">수정</span> 한국 사전 캠프 위치: 프로보 → <strong>솔트레이크시티 (유타대, 해발 약 1,410m)</strong>로 정정</li>
+      <li><span class="badge b-fix">보강</span> 트리니다드토바고전 스코어 <strong>5-0 승</strong> 확인 (1차 조사에서는 미확인)</li>
+      <li><span class="badge b-fix">보강</span> <strong>조유민 부상 아웃</strong>, 조위제 대체 발탁 — 수비 뎁스 변수 추가</li>
+      <li><span class="badge b-fix">보강</span> 체코는 <strong>저지대 캠프만 운영</strong> — 고지대 적응 격차 근거 강화</li>
+      <li><span class="badge b-fix">보강</span> 체코 최근 5경기 15득점 6실점 — 체코 공격력 과소평가 방지 (λ=1.15 유지 타당성 확인)</li>
+      <li><span class="badge b-fix">수정</span> 순수 포아송 표 → <strong>Dixon-Coles 보정(ρ=−0.13)</strong> 적용 표로 교체. 1-1이 13.0%→14.7%, 0-0이 9.1%→10.8%로 상향되어 시장 무승부 확률(32%)과 정합</li>
+    </ul>
+  </div>
+  <div class="note"><strong>⚠️ 한계 및 유의사항</strong> — 본 분석은 확률 모델이며 단일 경기 결과를 보장하지 않습니다. H2H 표본이 3경기로 작고 최근 경기가 10년 전이라는 점, 월드컵 첫 경기 특유의 긴장감(역대 대회 1차전은 평균 득점이 낮은 경향), 우기 소나기 등 날씨 변수는 모델에 부분적으로만 반영되어 있습니다.</div>
+</div>
+
+<div class="card">
+  <h2>6. 출처</h2>
+  <ul class="src">
+    <li><a href="https://www.espn.com/soccer/story/_/id/49009977/fifa-world-cup-2026-south-korea-vs-czechia-kickoff-how-watch-stats-team-news">ESPN — 경기 정보·팀 뉴스·통계</a></li>
+    <li><a href="https://www.sportsline.com/insiders/south-korea-vs-czechia-odds-predictions-2026-world-cup-picks-from-elite-soccer-expert/">SportsLine — 배당률·Kalshi 시장 확률</a></li>
+    <li><a href="https://www.cbssports.com/soccer/news/south-korea-czechia-odds-prediction-time-2026-world-cup-picks-best-bets/">CBS Sports — 오버/언더·베스트 베팅</a></li>
+    <li><a href="https://www.fanduel.com/research/south-korea-vs-czechia-prediction-world-cup-2026-who-will-score-first-goal-in-tonight-match">FanDuel Research — 득점자 마켓·손흥민/시크 분석</a></li>
+    <li><a href="https://www.sportsmole.co.uk/football/south-korea/world-cup-2026/head-to-head/south-korea-vs-czech-republic-head-to-head-record-and-past-meetings-ahead-of-world-cup-2026-clash_598926.html">Sports Mole — 역대 상대전적</a></li>
+    <li><a href="https://www.livescore.com/en/news/football/world-cup/predictions/south-korea-vs-czech-republic-predictions/">LiveScore — 팀 뉴스·부상 (조유민 아웃)</a></li>
+    <li><a href="https://www.munhwa.com/article/11590567">문화일보 — 솔트레이크시티 고지대 적응훈련</a></li>
+    <li><a href="https://www.newspim.com/news/view/20260608000002">뉴스핌 — 해발 1,571m 고지대 변수</a></li>
+    <li><a href="https://sports.khan.co.kr/article/202605261622003/">스포츠경향 — 한국 고지대 훈련 vs 체코 저지대 캠프</a></li>
+    <li><a href="https://www.khan.co.kr/article/202606082005005/">경향신문 — 고지대·잔디 적응 우위 분석</a></li>
+    <li><a href="https://namu.wiki/w/%ED%99%8D%EB%AA%85%EB%B3%B4%ED%98%B8(%EC%84%B1%EC%9D%B8%202%EA%B8%B0)/2026%EB%85%84">나무위키 — 홍명보호 2026년 평가전 기록</a></li>
+    <li><a href="https://www.espn.com/soccer/team/_/id/450/czechia">ESPN — 체코 최근 경기 결과</a></li>
+    <li><a href="https://xeniaevents.com/venue-guide/estadio-akron-guadalajara/">Xenia Events — 과달라하라 고도·구장 정보</a></li>
+    <li><a href="https://sports.yahoo.com/articles/heres-weather-first-world-cup-140101053.html">Yahoo Sports — 개막 주간 날씨</a></li>
+  </ul>
+</div>
+
+<footer>본 보고서는 2026-06-11 기준 공개 정보를 바탕으로 작성된 확률 분석 자료입니다. · Dixon-Coles 보정 포아송 모델 (λ<sub>KOR</sub>=1.25, λ<sub>CZE</sub>=1.15, ρ=−0.13)</footer>
+</div>
+</body>
+</html>
